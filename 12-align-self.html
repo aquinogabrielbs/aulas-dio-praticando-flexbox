@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align-Self</title>
+    <style>
+        .flex-container {
+            max-width: 350px;
+            border: 1px solid;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .item {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        .align-container {
+            align-items: flex-end;
+        }
+
+        .align-container-center {
+            align-items: center;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+        
+        .direction {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+    <h2>Auto</h2>
+    <section class="flex-container align-container-center">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Texto Texto Texto Texto Texto</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <h2>Mix 1</h2>
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Texto Texto Texto Texto Texto</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <h2>Mix 2</h2>
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">AAA</div>
+        <div class="item end">AAA</div>
+        <div class="item stretch">Texto Texto Texto Texto Texto Texto Texto</div>
+    </section>
+
+    <h1>Column</h1>
+    <h2>Auto</h2>
+    <section class="flex-container align-container direction">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Texto Texto Texto Texto Texto</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <h2>Mix 1</h2>
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Texto Texto Texto Texto Texto</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <h2>Mix 2</h2>
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">AAA</div>
+        <div class="item end">AAA</div>
+        <div class="item stretch">Texto Texto Texto Texto Texto Texto Texto</div>
+    </section>
+</body>
+</html>
